@@ -11,6 +11,7 @@ import PrimarySearchAppBar from "./s1_navBar/primarySearchAppBar/NavBar";
 import ImageAvatars from "./avatar/Avatar";
 import ChatOnline from "./s1_navBar/chatOnline/ChatOnline";
 import WhoToFollow from "./s4_users/whoToFollow/WhoToFollow";
+import UsersContainer from "./s4_users/user/UsersContainer";
 
 
 
@@ -31,7 +32,7 @@ export default function App() {
                         {/*<Route exact path='/' render={() => <Redirect to={"/profile"}/>}/>*/}
                         <Route path='/profile' render={() => <Profile/>}/>
                         <Route path='/dialogs' render={() => <Dialogs/>}/>
-                        <Route path='/users' render={() => <Users/>}/>
+                        <Route path='/users' render={() => <UsersContainer/>}/>
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>
                         <Route path='*' render={() => <div>404 not found</div>}/>

@@ -6,6 +6,16 @@
     grid-row-gap: 0px;
     margin: 20px;
 }
+.user_status {
+    font-family: 'Balsamiq Sans', sans-serif;
+    margin-top: 20px;
+    font-size: 13px;
+    color: grey;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
 
 .user_container {
     display: contents;
@@ -28,7 +38,6 @@
 }
 
 .name_user {
-    display: flex;
     transform: translateY(10px);
 }
 
