@@ -1,0 +1,44 @@
+.users_container {
+    display: grid;
+    grid-template-columns: 100px repeat(2, 1fr);
+    grid-template-rows: 130px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 20px;
+}
+
+.user_container {
+    display: contents;
+}
+
+.img_user {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.name_user a {
+    font-weight: 600;
+    color: #27aae1;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: 1.1;
+}
+
+.name_user {
+    display: flex;
+    transform: translateY(10px);
+}
+
+
+.name_user a:active, focus {
+    outline: none
+}
+.div3 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: translate(10px,10px)
+}

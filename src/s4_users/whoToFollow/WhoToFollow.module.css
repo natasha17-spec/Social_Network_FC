@@ -1,0 +1,50 @@
+.title {
+    font-family: 'Lato', sans-serif;
+    line-height: 26px;
+    color: #6d6e71;
+    font-size: 18px;
+    margin: 20px 30px 30px 0px;
+    font-weight: 700;
+}
+.whoToFollow {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 55px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+}
+.whoToFollow_container {
+    margin-right: 50px;
+}
+.whoToFollow_ava {
+    grid-area: 1 / 1 / 2 / 2
+}
+.whoToFollow_addFriend {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.name.addFriend a:active,focus {
+    outline: none;
+}
+.name a {
+    color: #27aae1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.addFriend a {
+    color: #8dc63f;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    line-height: 26px;
+    font-size: 13px;
+}
