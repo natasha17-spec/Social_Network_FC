@@ -1,5 +1,4 @@
 import React from "react";
-import styles from './NavBar.module.css'
 import {NavLink} from "react-router-dom";
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -19,19 +18,20 @@ import brown from "@material-ui/core/colors/brown";
 import SettingsIcon from '@material-ui/icons/Settings';
 import grey from "@material-ui/core/colors/grey";
 
+import styles from './Menu.module.css'
+
 const useStyles = makeStyles({
     root: {
         width: 230,
     },
 });
 
-const NavBar = () => {
+const Menu = () => {
     const classes = useStyles();
 
     return (
         <Paper className={classes.root}>
             <MenuList>
-
                 <MenuItem>
                     <ListItemIcon>
                         <AccountCircleIcon style={{color: green[800]}} fontSize="small"/>
@@ -86,11 +86,9 @@ const NavBar = () => {
                         <NavLink to="/settings" activeClassName={styles.activeLink}>Settings</NavLink>
                     </div>
                 </MenuItem>
-
-
             </MenuList>
         </Paper>
     );
 }
 
-export default NavBar;
+export default Menu;

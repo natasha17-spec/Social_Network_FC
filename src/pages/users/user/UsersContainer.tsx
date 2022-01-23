@@ -5,7 +5,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {createStyles} from "@material-ui/core";
 import styles from "./User.module.css"
-import Preloader from "../../progress/Preloader";
+import Preloader from "../../../../src/components/preloader/Preloader";
 import {actions, follow, getUsers, unfollow} from '../../../redux/reducers/usersReducer';
 import {AppStateType} from '../../../redux/store';
 

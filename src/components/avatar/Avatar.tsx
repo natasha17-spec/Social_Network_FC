@@ -3,6 +3,7 @@ import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import ava from './../../assets/3.jpg'
 import photo from './../../assets/ava.jpg'
+
 import styles from './Avatar.module.css'
 
 const useStyles = makeStyles((theme: Theme) =>

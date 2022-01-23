@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
-const WhoToFollowUser = () => {
+const WhoToFollowUser: React.FC = () => {
     const classes = useStyles();
 
     return (
