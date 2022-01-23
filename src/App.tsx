@@ -1,24 +1,23 @@
-import React, {lazy} from 'react';
+import React, {lazy, Suspense} from 'react';
 import styles from './App.module.css'
 import {Route, Switch} from "react-router-dom";
-
-import {Settings} from "@material-ui/icons";
 
 import ImageAvatars from './components/avatar/Avatar';
 import Menu from './components/menu/Menu';
 import ChatOnline from './components/menu/who_online/ChatOnline';
-import WhoToFollow from './pages/users/whoToFollow/WhoToFollow';
-import Panel from './pages/navBar/panel/Panel';
+import WhoToFollow from './pages/customer/follow';
+import Panel from './pages/navBar/panel';
 
-
-const ProfilePage = lazy(() => import('./../src/pages/profile/Profile'));
-const UsersContainerPage = lazy(() => import('./../src/pages/users/user/UsersContainer'));
-const DialogsPage = lazy(() => import('./../src/pages/dialogs/Dialogs'));
-const NewsPage = lazy(() => import('./../src/pages/news/News'));
+const ProfilePage = lazy(() => import('./pages/profile'));
+const UsersContainerPage = lazy(() => import('./pages/customer/user/UsersContainer'));
+const DialogsPage = lazy(() => import('./pages/dialogs'));
+const NewsPage = lazy(() => import('./pages/news'));
+const ChatPage = lazy(() => import('./../src/pages/chat/index'));
+const SettingsPage = lazy(() => import('./../src/pages/settings/index'));
 
 export default function App() {
     return (
-        <div>
+        <>
             <Panel/>
             <div className={styles.parent}>
                 <div className={styles.div1}><ImageAvatars/></div>
@@ -29,17 +28,19 @@ export default function App() {
                     <ChatOnline/>
                 </div>
                 <div className={styles.div5}>
-                    <Switch>
-                        <Route path='/profile' render={() => <ProfilePage/>}/>
-                        <Route path='/dialogs' render={() => <DialogsPage/>}/>
-                        <Route path='/users' render={() => <UsersContainerPage/>}/>
-                        <Route path='/news' render={() => <NewsPage/>}/>
-                        <Route path='/settings' render={() => <Settings/>}/>
-                        <Route path='*' render={() => <div>404 not found</div>}/>
-                    </Switch>
+                    <Suspense fallback={<div/>}>
+                        <Switch>
+                            <Route path='/profile' render={() => <ProfilePage/>}/>
+                            <Route path='/dialogs' render={() => <DialogsPage/>}/>
+                            <Route path='/users' render={() => <UsersContainerPage/>}/>
+                            <Route path='/news' render={() => <NewsPage/>}/>
+                            <Route path='/settings' render={() => <SettingsPage/>}/>
+                            <Route path='/chat' render={() => <ChatPage/>}/>
+                            <Route path='*' render={() => <div>404 not found</div>}/>
+                        </Switch>
+                    </Suspense>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
-

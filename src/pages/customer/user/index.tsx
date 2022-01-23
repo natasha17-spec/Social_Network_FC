@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./User.module.css"
+import styles from "./index.module.css"
 import avaUser from "./../../../assets/6.jpg"
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {createStyles, Theme} from "@material-ui/core";
@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme: Theme) =>
 ;
 type UsersPropsType = {
     user: UserType
-    unfollowUser:(userId:number)=>void
-    followUser:(userId:number)=>void
+    unfollowUser: (userId: number) => void
+    followUser: (userId: number) => void
     followingInProgress: Array<number>
 }
 const User: React.FC<UsersPropsType> = (props) => {
@@ -48,12 +48,17 @@ const User: React.FC<UsersPropsType> = (props) => {
                         <Button variant="contained"
                                 color="secondary"
                                 className={classes.button}
-                                disabled={props.followingInProgress.some(id=>id===props.user.id)}
-                                onClick={()=>{props.unfollowUser(props.user.id)}}>
+                                disabled={props.followingInProgress.some(id => id === props.user.id)}
+                                onClick={() => {
+                                    props.unfollowUser(props.user.id)
+                                }}>
                             Unfollow
                         </Button> :
-                        <Button variant="contained" color="primary" className={classes.button} disabled={props.followingInProgress.some(id=>id===props.user.id)}
-                                onClick={()=>{props.followUser(props.user.id)}}>
+                        <Button variant="contained" color="primary" className={classes.button}
+                                disabled={props.followingInProgress.some(id => id === props.user.id)}
+                                onClick={() => {
+                                    props.followUser(props.user.id)
+                                }}>
                             Follow
                         </Button>
                     }

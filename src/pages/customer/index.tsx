@@ -1,13 +1,13 @@
 import React, {ChangeEvent, useCallback, useEffect} from 'react'
-import Users from "../users/Users";
+import Users from "./users";
 import {useDispatch, useSelector} from "react-redux";
 import Pagination from "@material-ui/lab/Pagination";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {createStyles} from "@material-ui/core";
 import styles from "./User.module.css"
-import Preloader from "../../../../src/components/preloader/Preloader";
-import {actions, follow, getUsers, unfollow} from '../../../redux/reducers/usersReducer';
-import {AppStateType} from '../../../redux/store';
+import Preloader from "../../../src/components/preloader/Preloader";
+import {actions, follow, getUsers, unfollow} from '../../redux/reducers/usersReducer';
+import {AppStateType} from '../../redux/store';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -18,8 +18,15 @@ const useStyles = makeStyles((theme) =>
         },
     }),
 );
-const UsersContainer:React.FC = ()=>{
-    const {users, pageSize, currentPage, totalUsersCount,progress, followingInProgress} = useSelector((state: AppStateType) => state.getUsersReducers)
+const UsersContainer: React.FC = () => {
+    const {
+        users,
+        pageSize,
+        currentPage,
+        totalUsersCount,
+        progress,
+        followingInProgress
+    } = useSelector((state: AppStateType) => state.getUsersReducers)
     const dispatch = useDispatch()
     const pageChangedHandler = (e: ChangeEvent<unknown>, page: number) => {
         dispatch(actions.setCurrentPage(page))
@@ -39,7 +46,7 @@ const UsersContainer:React.FC = ()=>{
         const action = unfollow(userId);
         dispatch(action);
     }, [dispatch]);
-    return(
+    return (
         <div>
             <div className={styles.pagination}>
                 <div className={classes.root}>
@@ -56,14 +63,14 @@ const UsersContainer:React.FC = ()=>{
                 </div>
             </div>
             <div className={styles.progress}>{progress ? <Preloader/> : null}</div>
-                <Users users={users}
-                       pageSize={pageSize}
-                       currentPage={currentPage}
-                       totalUsersCount={totalUsersCount}
-                       followUser={followUser}
-                       unfollowUser={unfollowUser}
-                       followingInProgress={followingInProgress}
-                />
+            <Users users={users}
+                   pageSize={pageSize}
+                   currentPage={currentPage}
+                   totalUsersCount={totalUsersCount}
+                   followUser={followUser}
+                   unfollowUser={unfollowUser}
+                   followingInProgress={followingInProgress}
+            />
 
         </div>
     )

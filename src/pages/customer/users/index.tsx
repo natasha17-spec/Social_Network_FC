@@ -1,5 +1,5 @@
 import React from "react";
-import User from "../user/User";
+import User from "../user";
 import {UserType} from '../../../redux/reducers/usersReducer';
 
 type UsersPropsType = {

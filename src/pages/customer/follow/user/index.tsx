@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../whoToFollow/WhoToFollow.module.css"
+import styles from "../index.module.css"
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import ava1 from "../../../../assets/1.jpg";
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
-const WhoToFollowUser: React.FC = () => {
+const FollowUser: React.FC = () => {
     const classes = useStyles();
 
     return (
@@ -33,4 +33,4 @@ const WhoToFollowUser: React.FC = () => {
         </div>
     )
 };
-export default WhoToFollowUser;
+export default FollowUser;
