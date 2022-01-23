@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./User.module.css"
-import avaUser from "../../assets/6.jpg"
+import avaUser from "./../../../assets/6.jpg"
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {createStyles, Theme} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-import {UserType} from "../../redux/reducers/usersReducer";
 import {NavLink} from "react-router-dom";
+import {UserType} from '../../../redux/reducers/usersReducer';
 
 const useStyles = makeStyles((theme: Theme) =>
         createStyles({

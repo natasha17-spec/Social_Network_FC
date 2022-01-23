@@ -1,13 +1,14 @@
 import React, {ChangeEvent, useCallback, useEffect} from 'react'
 import Users from "../users/Users";
-import {AppStateType} from "../../redux/store";
 import {useDispatch, useSelector} from "react-redux";
-import {actions, follow, getUsers, unfollow, UserType} from "../../redux/reducers/usersReducer";
 import Pagination from "@material-ui/lab/Pagination";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {createStyles} from "@material-ui/core";
 import styles from "./User.module.css"
 import Preloader from "../../progress/Preloader";
+import {actions, follow, getUsers, unfollow} from '../../../redux/reducers/usersReducer';
+import {AppStateType} from '../../../redux/store';
+
 const useStyles = makeStyles((theme) =>
     createStyles({
         root: {

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../whoToFollow/WhoToFollow.module.css"
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
-import ava1 from "../../../assets/1.jpg";
+import ava1 from "../../../../assets/1.jpg";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
