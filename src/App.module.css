@@ -23,21 +23,12 @@
 
 .div4 {
     grid-area: 2 / 2 / 6 / 3;
-
 }
 
 .div5 {
     grid-area: 2 / 3 / 6 / 6;
 }
-.img {
-    background-image: url("./assets/ozero_gory_derevia_129959_1920ываx1080.jpg");
-    background-position: center;
-    background-size: cover;
-    min-height: 360px;
-    border-radius: 0 0 4px 4px;
-    position: relative;
-    min-width: 350px;
-}
+
 .navbar {
     display: grid;
     grid-template-columns: 30px 1fr repeat(3, 0);
@@ -54,13 +45,11 @@
 }
 .navbar_names {
     grid-area: 2 / 2 / 3 / 3;
-
 }
 .navMenu_icons {
-
 }
 li {
-    list-style-type:none;
+    list-style-type: none;
 }
 
 ul {
@@ -68,6 +57,6 @@ ul {
     /* Отступ слева в браузере IE и Opera */
     padding-left: 0;
     margin-top: 0;
-    padding-top:0;
+    padding-top: 0;
     /* Отступ слева в браузере Firefox, Safari, Chrome */
 }

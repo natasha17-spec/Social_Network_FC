@@ -1,0 +1,9 @@
+.form {
+  display: flex;
+  align-items: end;
+}
+
+.button {
+  height: 56px;
+  display: flex;
+}

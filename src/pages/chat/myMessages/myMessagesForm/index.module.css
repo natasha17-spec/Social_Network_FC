@@ -1,0 +1,34 @@
+.message {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+.form {
+    background-color: #abc677;
+    justify-content: end;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    min-height: 50px;
+    padding: 5px;
+}
+
+.form div {
+    margin-right: 5px;
+}
+
+
+.wrap {
+    height: 57px;
+    display: flex;
+    align-items: end;
+}
+
+.dot {
+    background-color: #abc677;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}

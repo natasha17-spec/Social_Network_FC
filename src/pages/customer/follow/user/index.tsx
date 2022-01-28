@@ -1,20 +1,20 @@
 import React from "react";
-import styles from "../index.module.css"
+import styles from "../index.module.css";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
-import ava1 from "../../../../assets/1.jpg";
+import ava1 from "./../../../../assets/images/avatar/1.jpg";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            display: 'flex',
-            borderRadius: '50%',
-            '& > *': {
+            display: "flex",
+            borderRadius: "50%",
+            "& > *": {
                 margin: theme.spacing(1),
-                border: '2px solid white',
+                border: "2px solid white",
             },
         },
-    }),
+    })
 );
 const FollowUser: React.FC = () => {
     const classes = useStyles();
@@ -27,10 +27,14 @@ const FollowUser: React.FC = () => {
                 </div>
             </div>
             <div className={styles.whoToFollow_addFriend}>
-                <div className={styles.name}><a href="#">Masha Klinkovich</a></div>
-                <div className={styles.addFriend}><a href="#">add Friend</a></div>
+                <div className={styles.name}>
+                    <a href="#">Masha Klinkovich</a>
+                </div>
+                <div className={styles.addFriend}>
+                    <a href="#">add Friend</a>
+                </div>
             </div>
         </div>
-    )
+    );
 };
 export default FollowUser;

@@ -1,5 +1,5 @@
 .title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 26px;
     color: #6d6e71;
     font-size: 18px;
@@ -18,17 +18,21 @@
     margin-right: 50px;
 }
 .whoToFollow_ava {
-    grid-area: 1 / 1 / 2 / 2
+    grid-area: 1 / 1 / 2 / 2;
 }
+
 .whoToFollow_addFriend {
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
     flex-direction: column;
     align-items: baseline;
 }
-.name.addFriend a:active,focus {
+
+.name.addFriend a:active,
+focus {
     outline: none;
 }
+
 .name a {
     color: #27aae1;
     text-decoration: none;
@@ -44,7 +48,7 @@
     background-color: transparent;
     box-sizing: border-box;
     cursor: pointer;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 26px;
     font-size: 13px;
 }
